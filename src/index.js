@@ -2,7 +2,11 @@ const express = require('express');
 
 const hargaRoutes = require('./routes/harga')
 
+const middlewareLogRequest = require('./middleware/logs')
+
 const app = express();
+
+app.use(middlewareLogRequest);
 
 app.use("/harga", hargaRoutes);
 

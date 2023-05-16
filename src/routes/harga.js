@@ -1,11 +1,14 @@
 const express = require('express');
 
-const hargaController = require('../controller/harga')
+const routes = express.Router();
 
-const router = express.Router();
+const {
+    getAllHarga,
+    createNewHarga
+} = require('../controller/harga')
 
-router.get('/', hargaController.getAllHarga)
+routes.get('/', getAllHarga)
 
-router.post('/', hargaController.createNewHarga)
+routes.post('/', createNewHarga)
 
-module.exports = router;
+module.exports = routes;
