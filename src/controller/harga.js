@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 const hargaModel = require('../models/harga-beras');
 
 async function getAllHarga(req, res) {
