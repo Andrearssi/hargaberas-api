@@ -7,6 +7,7 @@ const middlewareLogRequest = require('./middleware/logs')
 const app = express();
 
 app.use(middlewareLogRequest);
+app.use(express.json());
 
 app.use("/harga", hargaRoutes);
 
